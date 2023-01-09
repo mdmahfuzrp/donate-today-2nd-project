@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.primary-button {
+    background: #FF5959;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 2px solid #FF5959;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.primary-button:hover {
+    background: transparent;
+    color: #FF5959;
+}
+
+.header-title,
+.header-description {
+    color: #FFFFFF;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(360deg, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url(../images/header-bg.png);
+    min-height: 100vh;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .header-content {
+    width: 825px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 65px;
+}
+
+.header-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 20px 0 30px 0;
+    max-width: 700px;
+}
+
+/* main Styles */
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin: 130px;
+}
+
+/* donate-today styles */
+.donate-today {
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: #121212;
+}
+
+.section-description {
+    font-weight: 400;
+    font-size: 18px;
+    color: #707070;
+    max-width: 700px;
+    margin: 20px auto 50px auto;
+}
+
+.donate-today ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.donate-today ul li {
+    list-style: none;
+    font-weight: 700;
+    font-size: 30px;
+    color: #707070;
+    padding: 25px 40px;
+    background: #FAFAFA;
+    border: 2px solid #FAFAFA;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.donate-today ul li:hover,
+.donate-today ul li:nth-child(2) {
+    color: #FF5959;
+    background: #FFEEEE;
+    border: 2px solid #FF5959;
+}
+
+.another-option {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.another-option input {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 30px;
+    color: #707070;
+}
+
+.another-option input::placeholder {
+    color: #B3B3B3;
+}
+
+.another-option button {
+    width: fit-content;
+    margin: 0 auto;
+}
+
