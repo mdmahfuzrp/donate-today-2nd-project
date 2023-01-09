@@ -28,6 +28,10 @@
     color: #FFFFFF;
 }
 
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Header Styles */
 header {
     background: linear-gradient(360deg, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url(../images/header-bg.png);
@@ -70,15 +74,11 @@ main {
 }
 
 /* donate-today styles */
-.donate-today {
-    text-align: center;
-    margin-bottom: 130px;
-}
-
 .section-title {
     font-weight: 700;
     font-size: 45px;
     color: #121212;
+    text-align: center;
 }
 
 .section-description {
@@ -87,6 +87,7 @@ main {
     color: #707070;
     max-width: 700px;
     margin: 20px auto 50px auto;
+    text-align: center;
 }
 
 .donate-today ul {
@@ -142,3 +143,145 @@ main {
     margin: 0 auto;
 }
 
+/* Donate Plan Styles */
+.donate-plan {
+    margin: 130px 0;
+}
+
+.plan-item-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.plan-item {
+    max-width: 360px;
+    padding: 50px 25px;
+    background: rgba(79, 157, 166, 0.1);
+    border-radius: 5px;
+    margin-right: 25px;
+    transition: .3s ease-in-out;
+    cursor: zoom-in;
+}
+
+.plan-item:first-child:hover {
+    background: rgba(79, 157, 166, 0.246);
+}
+
+.plan-item:nth-child(2) {
+    background: rgba(255, 89, 89, 0.1);
+}
+
+.plan-item:nth-child(2):hover {
+    background: rgba(255, 89, 89, 0.224);
+}
+
+.plan-item:last-child {
+    background: #FFF4D6;
+    margin-right: 0;
+}
+
+.plan-item:last-child:hover {
+    background: #f7e7b9;
+}
+
+.plan-item .plan-item-title {
+    margin: 30px 0 15px 0;
+    font-weight: 600;
+    font-size: 24px;
+    color: #121212;
+}
+
+.plan-item .plan-item-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: #707070;
+}
+
+/* Contribute Section Style */
+.contribute-item {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contribute-item:last-child {
+    margin-bottom: 0;
+    flex-direction: row-reverse;
+}
+
+.contribute-info {
+    width: 490px;
+}
+
+.contribute-info .section-title,
+.contribute-info .section-description {
+    text-align: left;
+}
+
+.contribute-info p.section-description {
+    margin: 20px 0 30px 0;
+}
+
+/* Update Section Styles */
+.update-section {
+    margin: 130px 0;
+}
+
+.update-section .subscribe {
+    max-width: 800px;
+    min-height: 200px;
+    margin: 0 auto;
+    background: #FFF4D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-section .subscribe .do-subs input {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.update-section .do-subs {
+    background: #D9D9D9;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.update-section .do-subs input::placeholder {
+    color: #AA9F9F;
+}
+
+.update-section .do-subs button.primary-button {
+    font-family: 'Roboto';
+    padding: 14px 20px;
+    border-radius: 0 5px 5px 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.update-section .do-subs button.primary-button:hover {
+    background: #f94444;
+    color: white;
+}
+
+
+/* Footer Styles */
+footer {
+    background: #0B0D17;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    color: #D9DBE1;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
