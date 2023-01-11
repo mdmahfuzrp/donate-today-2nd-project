@@ -69,8 +69,8 @@ header .header-content {
 /* main Styles */
 main {
     max-width: 1140px;
-    margin: 0 auto;
-    margin: 130px;
+    margin: 130px auto;
+    padding: 0 50px;
 }
 
 /* donate-today styles */
@@ -89,10 +89,17 @@ main {
     margin: 20px auto 50px auto;
     text-align: center;
 }
-
-.donate-today ul {
+.donate-today{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+.donate-today ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
 }
 
 .donate-today ul li {
@@ -100,7 +107,7 @@ main {
     font-weight: 700;
     font-size: 30px;
     color: #707070;
-    padding: 25px 40px;
+    padding: 20px 30px;
     background: #FAFAFA;
     border: 2px solid #FAFAFA;
     border-radius: 5px;
@@ -149,8 +156,8 @@ main {
 }
 
 .plan-item-container {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
 }
 
@@ -205,7 +212,9 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-
+.contribute-item img{
+    width: 40%;
+}
 .contribute-item:last-child {
     margin-bottom: 0;
     flex-direction: row-reverse;
@@ -213,6 +222,7 @@ main {
 
 .contribute-info {
     width: 490px;
+    margin: 0 20px;
 }
 
 .contribute-info .section-title,
@@ -230,13 +240,19 @@ main {
 }
 
 .update-section .subscribe {
-    max-width: 800px;
+    max-width: 80%;
     min-height: 200px;
     margin: 0 auto;
     background: #FFF4D6;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.update-section .do-subs {
+    display: flex;
+    background: #D9D9D9;
+    border-radius: 5px 0px 0px 5px;
+    width: 60%;
 }
 
 .update-section .subscribe .do-subs input {
@@ -246,11 +262,7 @@ main {
     background: transparent;
     border: none;
     outline: none;
-}
-
-.update-section .do-subs {
-    background: #D9D9D9;
-    border-radius: 5px 0px 0px 5px;
+    width: 100%;
 }
 
 .update-section .do-subs input::placeholder {
@@ -284,4 +296,131 @@ footer p {
     font-weight: 400;
     font-size: 14px;
     text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .donate-today ul{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    header .header-content {
+        width: 90%;
+    }
+    .header-title{
+        font-size: 50px;
+    }
+}
+
+@media  screen and (max-width: 768px) {
+    header .header-content {
+        width: 90%;
+    }
+    .header-title{
+        font-size: 50px;
+    }
+    main{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .donate-today ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .section-title{
+        font-size: 30px;
+    }
+    .section-description{
+        max-width: none;
+    }
+    .plan-item-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .plan-item {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .plan-item:last-child{
+        margin-right: auto;
+    }
+    .contribute-item {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    .contribute-item:last-child{
+        flex-direction: column-reverse;
+    }
+    .contribute-item img{
+        width: 100%;
+    }
+    .contribute-info{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .contribute-info .section-title, .contribute-info .section-description{
+        text-align: left;
+    }
+    .update-section{
+        margin: 50px 0;
+    }
+    .update-section .subscribe{
+        max-width: 100%;
+    }
+    .update-section .do-subs{
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        background: none;
+    }
+    .update-section .subscribe .do-subs input{
+        background: #D9D9D9;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .update-section .do-subs button.primary-button{
+        width: fit-content;
+        border-radius: 5px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    header .header-content {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+    .header-title{
+        font-size: 40px;
+    }
+    main{
+        max-width: 100%;
+    }
+    .donate-today{
+        margin-top: 20px;
+    }
+    .donate-today ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .plan-item-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .donate-plan{
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    .update-section{
+        margin-top: 50px;
+    }
+    .contribute-info .section-title, .contribute-info .section-description{
+        text-align: justify;
+    }
 }
